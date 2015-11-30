@@ -13,13 +13,12 @@ town_arr = ["Ghanshire", "Steadholme", "Ravenwood", "Riveton", "Alefast", "Nahrs
 town_dict = dict()
 town_dict = {"Skyrim":"Dawnstar", "LOTR":"Archet", "GOT":"Winterfell", "Oblivion":"Cyrodil", "ESO":"Mathiisen", "Vikings":"Kattegat"}
 
-import random
-num2_rand = num2 * random.randrange(1, 2)
+print town_dict["Skyrim"]
 
 def calconclusion(a, b):
-    final = a/b
+    final = a + b
     return final
-c = calcConclusion(num2_rand, num1)
+c = calconclusion(int(num1), int(num3))
 print c
 
 print "Your Story begins!"
@@ -57,7 +56,7 @@ for i in range(0,3):
 
 print "Bahlgore then begins to name the towns he has burned only to ignite the hatred in your heart even more"
 
-if num1 > 3:
+if int(num1) > 3:
     print town_arr[0]
     print town_arr[1]
     print town_arr[2]
@@ -71,7 +70,6 @@ else:
     print town_dict["Oblivion"]
     print town_dict["ESO"]
     print town_dict["Vikings"]
-    pass
 
 print "His deep voice sends chills down your spine but you move forward anyways to as far as you an go without being in sight of the " \
       "beast. You see the beast and how he towers above you like a giant. Even though you are trembling with fear you spot where he keeps " \
@@ -81,6 +79,9 @@ print "His deep voice sends chills down your spine but you move forward anyways 
       "the enchanted meat in the midst of his dinner. In a blink of an eye the dragon shrinks to the size of a cat. You know you'll never get a " \
       "better shot at killing the wretched beast so you move in and slice off his head with one clean swipe of your sword. Immediately you travel " \
       "back to the kingdom to claim your reward and your honor"
+
+if c > 20:
+    print "Upon your arrival"
 
 
 
