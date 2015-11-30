@@ -22,6 +22,18 @@ town_dict = {"Skyrim":"Dawnstar", "LOTR":"Archet", "GOT":"Winterfell", "Oblivion
 
 #This function uses the information the user inputs to calculate a result. This result is used to decide that the ending is
 def conclusion(a, b):
+    """
+    The conclusion function was created to determine the outcome of the story later on
+    There is no direct input required for the information is collected when questions are asked at the start of the story
+    :param a:
+    :param b:
+    :return:
+    """
+    """
+    :param a:
+    :param b:
+    :return:
+    """
     final = a + b
     return final
 c = conclusion(int(num1), int(num3))
