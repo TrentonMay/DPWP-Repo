@@ -7,7 +7,10 @@ f_animal = raw_input("What's your favorite animal? ")
 f_jewelry = raw_input("What's your favorite piece of jewelry ")
 num1 = raw_input("Enter a number between 0-5 ")
 num2 = raw_input("Enter a number between 5-10 ")
-num3 = raw_input("Enter a number between 10-15 ")
+num3 = raw_input("Enter a number between 10-17 ")
+
+import random
+num1_rand = num1.randrange(1, 3)
 
 town_arr = ["Ghanshire", "Steadholme", "Ravenwood", "Riveton", "Alefast", "Nahrsong"]
 town_dict = dict()
@@ -81,7 +84,11 @@ print "His deep voice sends chills down your spine but you move forward anyways 
       "back to the kingdom to claim your reward and your honor"
 
 if c > 20:
-    print "Upon your arrival"
+    print "Upon your arrival you see that the entire kingdom was burned by the hands of Bahlgore whilst you we're on your journey to defeat him"
+else:
+    print "You arrive to the sound of trumpets and cheers as all the kingdom has already received word that you have defeated the dragon"
+    print "The king comes up to you and gives you the title of 'Paladin' and gives you" + str(num1_rand) + "gold pieces as a reward"
+    print "You are now the hero of the century"
 
 
 
