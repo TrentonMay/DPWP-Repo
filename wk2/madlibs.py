@@ -1,0 +1,8 @@
+knight_name = raw_input("Enter your Knightly Name")
+land_name = raw_input("Enter the name of your medieval country")
+king_name = raw_input("Enter the name of your King")
+pmetal = raw_input("What's your favorite precious metal?")
+f_animal = raw_input("What's your favorite animal?")
+f_jewelry = raw_input("What's your favorite piece of jewelry")
+num1 = raw_input("Enter a number between 0-5")
+num2 = raw_input("Enter a number between 5-10")
