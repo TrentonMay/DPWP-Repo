@@ -16,10 +16,11 @@ town_dict = {"Skyrim":"Dawnstar", "LOTR":"Archet", "GOT":"Winterfell", "Oblivion
 import random
 num2_rand = num2 * random.randrange(1, 2)
 
-def calcConclusion(num2_rand, num1):
-    final = num2_rand / num1
+def calcConclusion(a, b):
+    final = a / b
     return final
-print calcConclusion(num2_rand, num1)
+c = calcConclusion(num2_rand, num1)
+print c
 
 print "Your Story begins!"
 print "You are a Knight in the land of " + str(land_name) + ". Your name is " + str(knight_name) + " and you " \
