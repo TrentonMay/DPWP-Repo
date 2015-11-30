@@ -16,8 +16,8 @@ town_dict = {"Skyrim":"Dawnstar", "LOTR":"Archet", "GOT":"Winterfell", "Oblivion
 import random
 num2_rand = num2 * random.randrange(1, 2)
 
-def calcConclusion(a, b):
-    final = a / b
+def calconclusion(a, b):
+    final = a/b
     return final
 c = calcConclusion(num2_rand, num1)
 print c
