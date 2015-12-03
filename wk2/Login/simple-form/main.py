@@ -61,7 +61,48 @@ class MainHandler(webapp2.RequestHandler):
     </body>
 </html>
         """
+        final_content1 = """
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple Form</title>
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Your Order Is On Its Way!</h1>
+        </header>
 
+        <div class="result">
+            <h2>Your Order</h2>
+            <div class= "info">
+                <h3>Name</h3>
+                <p>{self.person}</p>
+            </div>
+            <div class= "info">
+                <h3>Email</h3>
+                <p>{self.email}</p>
+            </div>
+            <div class= "info">
+                <h3>Shipping to</h3>
+                <p>{self.addy}</p>
+            </div>
+            """
+        final_content2 = """
+            <div class= "info">
+                <h3>Subscribing?</h3>
+                <p>You selected {self.news} to our newsletter</p>
+            </div>
+            """
+        final_content3 = """
+            <div class= "info">
+                <h3>Your Flavor</h3>
+                <p>{self.flavor}</p>
+            </div>
+        </div>
+    </body>
+</html>
+        """
         if self.request.GET:
             person = self.request.GET['person']
             email = self.request.GET['email']
