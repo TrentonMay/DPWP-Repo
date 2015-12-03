@@ -5,7 +5,7 @@ Design Patterns For Web Programming
 Simple Form
 """
 import webapp2
-#from main_pages import MainPage
+# from main_pages import MainPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -15,14 +15,16 @@ class MainHandler(webapp2.RequestHandler):
             person = self.request.GET['person']
             email = self.request.GET['email']
             addy = self.request.GET['address']
-            news = self.request.GET["yes-no"]
-            #flavor = self.request.GET['option']
-            self.response.write(m.final_content1 + m.final_content2 + m.final_content3)
+            #news = self.request.GET["yes-no"]
+            # flavor = self.request.GET['option']
+            self.response.write(m.print_final())
         else:
-            self.response.write(m.print_content())
+            self.response.write(m.print_main())
 
 class MainPage(object):
     def __init__(self):
+        main = MainHandler()
+        self.perf = "Bobby"
         self.content = """
 <!DOCTYPE HTML>
 <html>
@@ -87,7 +89,7 @@ class MainPage(object):
             <h2>Your Order</h2>
             <div class= "info">
                 <h3>Name</h3>
-                <p>{person}</p>
+                <p>{self.perf}</p>
             </div>
             <div class= "info">
                 <h3>Email</h3>
@@ -113,9 +115,15 @@ class MainPage(object):
     </body>
 </html>
         """
+    def print_main(self):
+        page_content = self.content
+        page_content = page_content.format(**locals())
+        return page_content
+    def print_final(self):
+        final_page_content = self.final_content1 + self.final_content2 + self.final_content3
+        final_page_content = final_page_content.format(**locals())
+        return final_page_content
 
-    def print_content(self):
-        return self.content
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
