@@ -148,7 +148,7 @@ class MainPage(object):
         # Below, I'm formatting the content from html so that it can accept variables in the html
         # Without this it just simply displays what I enter as text
         final_page_content = final_page_content.format(**locals())
-        
+
         # Below, I'm simply returning what was formatted for use in the MainHandler
         return final_page_content
 

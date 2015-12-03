@@ -70,10 +70,10 @@ h3{
 .main-form{
     background-color: white;
     width: 40%;
-    float: left;
-    margin-top: 3%;
+    margin: 3% auto;
     padding-bottom: 3%;
     border-radius: 20px;
+    display: table;
 }
 form{
     width: 90%;
