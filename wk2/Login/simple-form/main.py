@@ -62,6 +62,15 @@ class MainHandler(webapp2.RequestHandler):
 </html>
         """
 
+        if self.request.GET:
+            person = self.request.GET['person']
+            email = self.request.GET['email']
+            addy = self.request.GET['address']
+            news = self.request.GET["yes-no"]
+            #flavor = self.request.GET['option']
+            self.response.write(final_content1 + final_content2 + final_content3)
+        else:
+            self.response.write(content)
 
 
 app = webapp2.WSGIApplication([
