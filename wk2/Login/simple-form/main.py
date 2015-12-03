@@ -11,61 +11,19 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         m = MainPage()
 
-        final_content1 = """
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Simple Form</title>
-        <link href="css/main.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <h1>Your Order Is On Its Way!</h1>
-        </header>
-
-        <div class="result">
-            <h2>Your Order</h2>
-            <div class= "info">
-                <h3>Name</h3>
-                <p>{person}</p>
-            </div>
-            <div class= "info">
-                <h3>Email</h3>
-                <p>{email}</p>
-            </div>
-            <div class= "info">
-                <h3>Shipping to</h3>
-                <p>{addy}</p>
-            </div>
-            """
-        final_content2 = """
-            <div class= "info">
-                <h3>Subscribing?</h3>
-                <p>You selected {news} to our newsletter</p>
-            </div>
-            """
-        final_content3 = """
-            <div class= "info">
-                <h3>Your Flavor</h3>
-                <p>{flavor}</p>
-            </div>
-        </div>
-    </body>
-</html>
-        """
         if self.request.GET:
             person = self.request.GET['person']
             email = self.request.GET['email']
             addy = self.request.GET['address']
             news = self.request.GET["yes-no"]
             #flavor = self.request.GET['option']
-            self.response.write(final_content1 + final_content2 + final_content3)
+            self.response.write(m.final_content1 + m.final_content2 + m.final_content3)
         else:
             self.response.write(m.print_content())
 
 class MainPage(object):
     def __init__(self):
-        content = """
+        self.content = """
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -109,6 +67,48 @@ class MainPage(object):
 
                 <input type="submit" value="Submit"/>
             </form>
+        </div>
+    </body>
+</html>
+        """
+        self.final_content1 = """
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple Form</title>
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Your Order Is On Its Way!</h1>
+        </header>
+
+        <div class="result">
+            <h2>Your Order</h2>
+            <div class= "info">
+                <h3>Name</h3>
+                <p>{person}</p>
+            </div>
+            <div class= "info">
+                <h3>Email</h3>
+                <p>{email}</p>
+            </div>
+            <div class= "info">
+                <h3>Shipping to</h3>
+                <p>{addy}</p>
+            </div>
+            """
+        self.final_content2 = """
+            <div class= "info">
+                <h3>Subscribing?</h3>
+                <p>You selected {news} to our newsletter</p>
+            </div>
+            """
+        self.final_content3 = """
+            <div class= "info">
+                <h3>Your Flavor</h3>
+                <p>{flavor}</p>
+            </div>
         </div>
     </body>
 </html>
