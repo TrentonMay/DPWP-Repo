@@ -15,21 +15,21 @@ class MainHandler(webapp2.RequestHandler):
             person = self.request.GET['person']
             email = self.request.GET['email']
             addy = self.request.GET['address']
-            #news = self.request.GET["yes-no"]
-            # flavor = self.request.GET['option']
-            self.response.write(m.print_final())
+            news = self.request.GET["yes-no"]
+            flavor = self.request.GET['option']
+            self.response.write(m.print_final(person, email, addy, news, flavor))
+            print person + email + addy + news + flavor
         else:
             self.response.write(m.print_main())
 
 class MainPage(object):
     def __init__(self):
-        main = MainHandler()
-        self.perf = "Bobby"
+        self.main = MainHandler()
         self.content = """
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Simple Form</title>
+        <title>Juice Order Form</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
@@ -59,12 +59,12 @@ class MainPage(object):
                 <input id="no-radio" type="radio" name="yes-no" value="no">
 
                 <h4>What is your favorite flavor?</h4>
-                <select>
-                    <option name="option" value="Fruit">Fruit</option>
-                    <option name="option" value="Mint">Mint</option>
-                    <option name="option" value="Baked">Baked</option>
-                    <option name="option" value="Tobacco">Tobacco</option>
-                    <option name="option" value="Random">Random</option>
+                <select name="option">
+                    <option value="Fruit">Fruit</option>
+                    <option value="Mint">Mint</option>
+                    <option value="Baked">Baked</option>
+                    <option value="Tobacco">Tobacco</option>
+                    <option value="Random">Random</option>
                 </select>
 
                 <input type="submit" value="Submit"/>
@@ -77,7 +77,7 @@ class MainPage(object):
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Simple Form</title>
+        <title>Juice Order Form</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
@@ -89,7 +89,7 @@ class MainPage(object):
             <h2>Your Order</h2>
             <div class= "info">
                 <h3>Name</h3>
-                <p>{self.perf}</p>
+                <p>{person}</p>
             </div>
             <div class= "info">
                 <h3>Email</h3>
@@ -119,7 +119,7 @@ class MainPage(object):
         page_content = self.content
         page_content = page_content.format(**locals())
         return page_content
-    def print_final(self):
+    def print_final(self, person, email, addy, news, flavor):
         final_page_content = self.final_content1 + self.final_content2 + self.final_content3
         final_page_content = final_page_content.format(**locals())
         return final_page_content
