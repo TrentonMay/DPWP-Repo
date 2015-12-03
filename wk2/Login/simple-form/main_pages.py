@@ -1,7 +1,6 @@
 class MainPage(object):
     def __init__(self):
-    def get(self):
-        self.content = """
+        content = """
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -10,38 +9,37 @@ class MainPage(object):
     </head>
     <body>
         <header>
-            <h1>Information For registration</h1>
+            <h1>Vape Juice Order Form</h1>
         </header>
 
         <div class="main-form">
             <form method="GET" action="">
-                <h2>Basic Information</h2>
+                <h2>Your Juice Sheet</h2>
 
-                <label>Task: </label>
-                <input type="text" name="task">
+                <label>Name: </label>
+                <input type="text" name="person">
 
-                <label>Due Time: </label>
-                <input type="text" name="due">
+                <label>Email: </label>
+                <input type="text" name="email">
 
-                <label>Status: </label>
-                <input type="text" name="status">
+                <label>Address: </label>
+                <input type="text" name="address">
 
                 <h4>Do you want to subscribe to our newsletter?</h4>
 
                 <label id="yes-radio-label">Yes</label>
-                <input id="yes-radio" type= "radio" name="yes" value="yes">
+                <input id="yes-radio" type= "radio" name="yes-no" value="yes">
 
                 <label id="no-radio-label">No</label>
-                <input id="no-radio" type="radio" name="no" value="no">
+                <input id="no-radio" type="radio" name="yes-no" value="no">
 
-                <h4>What is your favorite sport?</h4>
+                <h4>What is your favorite flavor?</h4>
                 <select>
-                    <option value="Football">Football</option>
-                    <option value="Ultimate Frisbee">Ultimate Frisbee</option>
-                    <option value="Soccer">Soccer</option>
-                    <option value="Hockey">Hockey</option>
-                    <option value="Baseball">Baseball</option>
-                    <option value="Rugby">Rugby</option>
+                    <option name="option" value="Fruit">Fruit</option>
+                    <option name="option" value="Mint">Mint</option>
+                    <option name="option" value="Baked">Baked</option>
+                    <option name="option" value="Tobacco">Tobacco</option>
+                    <option name="option" value="Random">Random</option>
                 </select>
 
                 <input type="submit" value="Submit"/>
@@ -50,8 +48,6 @@ class MainPage(object):
     </body>
 </html>
         """
-        if self.request.GET:
-            print self.request.GET['task']
 
     def print_content(self):
         return self.content
