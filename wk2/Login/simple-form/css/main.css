@@ -58,8 +58,12 @@ h2{
     font-family: Roboto,sans-serif;
     text-align: center;
 }
-h4{
+h4,{
     font-family: Roboto,sans-serif;
+}
+h3{
+   font-family: Roboto,sans-serif;
+   font-size: 1.3em;
 }
 
 /*----------------Form--------------*/
@@ -115,4 +119,21 @@ select{
     margin-bottom: 5%;
 }
 
+.result{
+    background-color: white;
+    width: 40%;
+    margin: 3% auto;
+    padding-bottom: 3%;
+    border-radius: 20px;
+    display: table;
+}
+
+.info{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.info p{
+    font-family: "Poiret One", sans-serif;
+}
 
