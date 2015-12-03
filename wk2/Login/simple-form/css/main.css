@@ -1,0 +1,118 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v15/e7MeVAyvogMqFwwl61PKhBkAz4rYn47Zy2rvigWQf6w.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v15/2tsd397wLxj96qwHyNIkxHYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poiret One'), local('PoiretOne-Regular'), url(http://fonts.gstatic.com/s/poiretone/v4/cKr_e199f0xMkxMkRbEJXwsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poiret One'), local('PoiretOne-Regular'), url(http://fonts.gstatic.com/s/poiretone/v4/3Annd_XP-99FcGbOpm6fVAsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poiret One'), local('PoiretOne-Regular'), url(http://fonts.gstatic.com/s/poiretone/v4/HrI4ZJpJ3Fh0wa5ofYMK8QzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body{
+    background-image: url("repeating-wood-background.jpg");
+    background-attachment: fixed;
+}
+header{
+    width: 100%
+}
+
+h1{
+    color: white;
+    font-size: 2.6em;
+    font-family: Roboto,sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+}
+h2{
+    font-size: 2em;
+    font-family: Roboto,sans-serif;
+    text-align: center;
+}
+h4{
+    font-family: Roboto,sans-serif;
+}
+
+/*----------------Form--------------*/
+.main-form{
+    background-color: white;
+    width: 40%;
+    float: left;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+}
+form{
+    width: 90%;
+    margin: 0 auto;
+}
+form input{
+    font-family: "Poiret One", sans-serif;
+    font-size: 1em;
+    padding: .7%;
+    width: 95%;
+    margin: 0 auto 3% auto;
+    border: solid #2A5DB0 .07em;
+    border-radius: 50px;
+}
+form label{
+    margin: 0 0 1% 2%;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.3em;
+}
+
+.main-form button{
+    border: none;
+    color: white;
+    background-color: #2A5DB0;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 100px;
+    width: 95%;
+    padding: 2%;
+}
+
+#no-radio-label, #no-radio{
+    width: 5%;
+    margin-left: 2%
+}
+#yes-radio-label, #yes-radio{
+    width: 5%;
+    margin-left: 2%;
+}
+
+select{
+    margin-bottom: 5%;
+}
+
+
