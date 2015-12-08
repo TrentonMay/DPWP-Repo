@@ -67,7 +67,7 @@ h3{
 }
 
 /*----------------Form--------------*/
-.main-form{
+.form{
     background-color: white;
     width: 40%;
     margin: 3% auto;
@@ -94,7 +94,7 @@ form label{
     font-size: 1.3em;
 }
 
-.main-form button{
+.form button{
     border: none;
     color: white;
     background-color: #2A5DB0;
