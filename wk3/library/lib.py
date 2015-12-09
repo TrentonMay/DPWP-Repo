@@ -28,12 +28,13 @@ class CalcMPG(object):
         self.__final_mpg = final_mpg
         return final_mpg
 
-class FinalCar(object, CalcMPG):
+class FinalCar(object):
     def __init__(self):
         self.__type = ""
         self.__alt_type = ""
         self.__type2 = ""
         self.__alt_type2 = ""
+
 
 
     def car_from_passengers(self, people):
@@ -52,7 +53,7 @@ class FinalCar(object, CalcMPG):
             return self.__type + " " + self.__alt_type
         else:
             self.__type = "We couldn't find a car for you based on passengers"
-            self.__alt_type = "We couldn't find a alternate car for you based on passengers"
+            self.__alt_type = "We couldn't find an alternate car for you based on passengers"
             print "There is no car that fits your needs based on passengers"
             return self.__type + " and " + self.__alt_type
 
@@ -72,7 +73,7 @@ class FinalCar(object, CalcMPG):
             return self.__type2 + " " + self.__alt_type2
         else:
             self.__type = "We couldn't find a car for you based on mpg"
-            self.__alt_type = "We couldn't find a alternate car for you based on mpg"
+            self.__alt_type = "We couldn't find an alternate car for you based on mpg"
             print "There is no car that fits your needs based on passengers"
             return self.__type2 + " and " + self.__alt_type2
 

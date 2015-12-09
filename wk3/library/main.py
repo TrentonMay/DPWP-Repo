@@ -13,6 +13,7 @@ class MainHandler(webapp2.RequestHandler):
         p = Pages()
         c = lib.CarData()
         m = lib.CalcMPG()
+        f = lib.FinalCar()
 
         if self.request.GET:
             person = self.request.GET['person']
@@ -24,9 +25,10 @@ class MainHandler(webapp2.RequestHandler):
 
             c.passenger = people
             miles_per = m.mpg(miles, gal)
-            car_from_passengers = c.car_from_passengers(int(people))
+            car_from_miles = f.car_from_mileage(miles_per)
+            car_from_passengers = f.car_from_passengers(int(people))
 
-            print c.car_from_passengers(int(people))
+            print f.car_from_passengers(int(people))
             print m.mpg(miles, gal)
             self.response.write(p.final_page)
         else:
