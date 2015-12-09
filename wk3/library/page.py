@@ -9,12 +9,12 @@ class Pages(object):
     </head>
     <body>
         <header>
-            <h1>What bike is good for you?</h1>
+            <h1>YouCar @copy</h1>
         </header>
 
         <div class="form">
             <form method="GET" action="">
-                <h2>Your Juice Sheet</h2>
+                <h2>Your Recommended Car</h2>
 
                 <label>Name: </label>
                 <input type="text" name="person">
@@ -22,8 +22,8 @@ class Pages(object):
                 <label>Email: </label>
                 <input type="text" name="email">
 
-                <label>Weight: </label>
-                <input type="text" name="weight">
+                <label># Of Passengers: </label>
+                <input type="text" name="passenger">
 
                 <h4>Do you want to subscribe to our newsletter?</h4>
 
@@ -33,13 +33,19 @@ class Pages(object):
                 <label id="no-radio-label">No</label>
                 <input id="no-radio" type="radio" name="yes-no" value="no">
 
-                <h4>What is your height?</h4>
-                <select name="option">
-                    <option value="tall">6' or more</option>
-                    <option value="medium">5'8" - 5'11"</option>
-                    <option value="average">5'5" - 5'10"</option>
-                    <option value="below average">5'0" - 5'4"</option>
-                    <option value="short">Below 5'0"</option>
+                <h4>Average weekly miles?</h4>
+                <select name="miles">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="400">400</option>
+                    <option value="800">800</option>
+                </select>
+                <h4>Desired Gallons to buy weekly?</h4>
+                <select name="gal">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
                 </select>
 
                 <input type="submit" value="Submit"/>
@@ -71,7 +77,7 @@ class Pages(object):
                 <p>{email}</p>
             </div>
             <div class= "info">
-                <h3>Size of bike</h3>
+                <h3>Car Type</h3>
                 <p>Your Weight is {weight}</p>
             </div>
             <div class= "info">
@@ -79,7 +85,7 @@ class Pages(object):
                 <p>You selected {news} to our newsletter</p>
             </div>
             <div class= "info">
-                <h3>Your Flavor</h3>
+                <h3>Mileage Needed</h3>
                 <p>{flavor}</p>
             </div>
         </div>
