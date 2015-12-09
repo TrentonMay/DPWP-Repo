@@ -17,10 +17,11 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             person = self.request.GET['person']
             email = self.request.GET['email']
-            c.passenger = self.request.GET['passenger']
+            passenger = self.request.GET['passenger']
             #news = self.request.GET["yes-no"]
             miles = self.request.GET['miles']
             gal = self.request.GET["gal"]
+            print c.car_type(passenger)
             print m.mpg(miles, gal)
             self.response.write(p.final_page)
         else:
