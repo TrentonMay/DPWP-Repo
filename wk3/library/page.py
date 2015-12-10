@@ -29,10 +29,10 @@ class Pages(object):
                 <h4>Do you want to subscribe to our newsletter?</h4>
 
                 <label id="yes-radio-label">Yes</label>
-                <input id="yes-radio" type= "radio" name="yes-no" value="yes">
+                <input id="yes-radio" type="radio" name="yesno" value="yes">
 
                 <label id="no-radio-label">No</label>
-                <input id="no-radio" type="radio" name="yes-no" value="no">
+                <input id="no-radio" type="radio" name="yesno" value="no">
 
                 <h4>Average weekly miles?</h4>
                 <select name="miles">
