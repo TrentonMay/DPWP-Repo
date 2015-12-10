@@ -58,16 +58,15 @@ class Pages(object):
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Cycle Dudes</title>
+        <title>YouCar</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <h1>Your recommended bike is:</h1>
+            <h1>Your recommendations are below</h1>
         </header>
 
         <div class="result">
-            <h2>Your Order</h2>
             <div class= "info">
                 <h3>Name</h3>
                 <p>{person}</p>
@@ -77,16 +76,16 @@ class Pages(object):
                 <p>{email}</p>
             </div>
             <div class= "info">
-                <h3>Car Type</h3>
-                <p>Your Weight is {weight}</p>
-            </div>
-            <div class= "info">
                 <h3>Subscribing?</h3>
                 <p>You selected {news} to our newsletter</p>
             </div>
             <div class= "info">
-                <h3>Mileage Needed</h3>
-                <p>{flavor}</p>
+                <h3>You gave us {passenger} passengers</h3>
+                <p>Based on this we recommend you get a {car_from_passengers}</p>
+            </div>
+            <div class= "info">
+                <h3>Your minimum mpg is {mpg}</h3>
+                <p>Based on this we recommend you get a {car_from_miles}</p>
             </div>
         </div>
     </body>

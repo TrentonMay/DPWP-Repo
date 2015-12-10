@@ -28,8 +28,11 @@ class MainHandler(webapp2.RequestHandler):
             car_from_miles = f.car_from_mileage(miles_per)
             car_from_passengers = f.car_from_passengers(int(people))
 
-            print f.car_from_passengers(int(people))
-            print m.mpg(miles, gal)
+
+
+            print car_from_miles
+            print car_from_passengers
+            #print m.mpg(miles, gal)
             self.response.write(p.final_page)
         else:
             self.response.write(p.content)

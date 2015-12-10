@@ -11,6 +11,7 @@ class CarData(object):
             print "There is no production vehicle that holds this many people"
         else:
             self.__passenger = x
+    
 
 
 class CalcMPG(object):
