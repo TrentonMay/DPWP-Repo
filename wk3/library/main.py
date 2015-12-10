@@ -19,21 +19,21 @@ class MainHandler(webapp2.RequestHandler):
             person = self.request.GET['person']
             email = self.request.GET['email']
             people = self.request.GET['passenger']
-            #news = self.request.GET["yes-no"]
+            news = self.request.GET["yes-no"]
             miles = self.request.GET['miles']
             gal = self.request.GET["gal"]
 
             c.passenger = people
-            miles_per = m.mpg(miles, gal)
-            car_from_miles = f.car_from_mileage(miles_per)
-            car_from_passengers = f.car_from_passengers(int(people))
+            mpg = m.mpg(miles, gal)
+            cfm = f.car_from_mileage(mpg)
+            cfp = f.car_from_passengers(int(people))
 
 
 
-            print car_from_miles
-            print car_from_passengers
+            print cfm
+            print cfp
             #print m.mpg(miles, gal)
-            self.response.write(p.final_page)
+            self.response.write(p.print_final(person, email, news, people, cfm, cfp, mpg))
         else:
             self.response.write(p.content)
 

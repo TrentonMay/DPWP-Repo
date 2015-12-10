@@ -11,7 +11,7 @@ class CarData(object):
             print "There is no production vehicle that holds this many people"
         else:
             self.__passenger = x
-    
+
 
 
 class CalcMPG(object):
@@ -43,15 +43,15 @@ class FinalCar(object):
         if x == 1:
             self.__type = "Muscle"
             self.__alt_type = "Sport"
-            return self.__type + " " + self.__alt_type
+            return self.__type + " or " + self.__alt_type + " car"
         elif x < 8 and x > 4:
             self.__type = "Van"
             self.__alt_type = "SUV"
-            return self.__type + " " + self.__alt_type
+            return self.__type + " or " + self.__alt_type
         elif x > 1 and x < 4:
             self.__type = "Sedan"
             self.__alt_type = "4-Seat Coup"
-            return self.__type + " " + self.__alt_type
+            return self.__type + " or " + self.__alt_type
         else:
             self.__type = "We couldn't find a car for you based on passengers"
             self.__alt_type = "We couldn't find an alternate car for you based on passengers"
@@ -63,15 +63,15 @@ class FinalCar(object):
         if m > 10 and m < 20:
             self.__type2 = "Muscle"
             self.__alt_type2 = "Sport"
-            return self.__type2 + " " + self.__alt_type2
+            return self.__type2 + " or " + self.__alt_type2 + " car"
         elif m > 20 and m < 30:
             self.__type2 = "Van"
             self.__alt_type2 = "SUV"
-            return self.__type2 + " " + self.__alt_type2
+            return self.__type2 + " or " + self.__alt_type2
         elif m > 30 and m < 50:
             self.__type2 = "Sedan"
             self.__alt_type2 = "4-Seat Coup"
-            return self.__type2 + " " + self.__alt_type2
+            return self.__type2 + " or " + self.__alt_type2
         else:
             self.__type = "We couldn't find a car for you based on mpg"
             self.__alt_type = "We couldn't find an alternate car for you based on mpg"

@@ -4,17 +4,17 @@ class Pages(object):
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Cycle Dudes</title>
+        <title>YouCar!</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <h1>YouCar @copy</h1>
+            <h1>YouCar!</h1>
         </header>
 
         <div class="form">
             <form method="GET" action="">
-                <h2>Your Recommended Car</h2>
+                <h2>Your Recommended Car Form</h2>
 
                 <label>Name: </label>
                 <input type="text" name="person">
@@ -54,11 +54,11 @@ class Pages(object):
     </body>
 </html>
         """
-        self.final_page = """
+        self.final_content = """
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>YouCar</title>
+        <title>YouCar!</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
@@ -66,28 +66,41 @@ class Pages(object):
             <h1>Your recommendations are below</h1>
         </header>
 
-        <div class="result">
-            <div class= "info">
-                <h3>Name</h3>
-                <p>{person}</p>
+        <div class="results">
+            <div class="result1">
+                <h2>Your Information</h2>
+                <div class= "info">
+                    <h3>Name</h3>
+                    <p>{person}</p>
+                </div>
+                <div class= "info">
+                    <h3>Email</h3>
+                    <p>{email}</p>
+                </div>
+                <div class= "info">
+                    <h3>Subscribing?</h3>
+                    <p>You selected {news} to our newsletter</p>
+                </div>
             </div>
-            <div class= "info">
-                <h3>Email</h3>
-                <p>{email}</p>
-            </div>
-            <div class= "info">
-                <h3>Subscribing?</h3>
-                <p>You selected {news} to our newsletter</p>
-            </div>
-            <div class= "info">
-                <h3>You gave us {passenger} passengers</h3>
-                <p>Based on this we recommend you get a {car_from_passengers}</p>
-            </div>
-            <div class= "info">
-                <h3>Your minimum mpg is {mpg}</h3>
-                <p>Based on this we recommend you get a {car_from_miles}</p>
+
+            <div class="result2">
+                <h2>Your Recommended vehicle is</h2>
+                <div class= "info">
+                    <h3>You gave us {people} passengers</h3>
+                    <p>Based on this we recommend you get a {cfp}</p>
+                </div>
+                <div class= "info">
+                    <h3>Your minimum mpg is {mpg}</h3>
+                    <p>Based on this we recommend you get a {cfm}</p>
+                </div>
             </div>
         </div>
     </body>
 </html>
 """
+    def print_final(self, person, email, news, people, cfm, cfp, mpg):
+        final_page = self.final_content
+        final_page = final_page.format(**locals())
+
+        # Below, I'm simply returning what was formatted for use in the MainHandler
+        return final_page
