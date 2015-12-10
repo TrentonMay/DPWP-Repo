@@ -7,7 +7,7 @@ class CarData(object):
         return self.__passenger
     @passenger.setter
     def passenger(self, x):
-        if x > 8:
+        if int(x) > 8:
             print "There is no production vehicle that holds this many people"
         else:
             self.__passenger = x
@@ -43,15 +43,15 @@ class FinalCar(object):
         if x == 1 or x == 0:
             self.__type = "Muscle"
             self.__alt_type = "Sport"
-            return self.__type + " or " + self.__alt_type + " car"
+            return "Based on this we recommend you get a " + self.__type + " or " + self.__alt_type + " car"
         elif x < 8 and x > 4:
             self.__type = "Van"
             self.__alt_type = "SUV"
-            return self.__type + " or " + self.__alt_type
+            return "Based on this we recommend you get a " + self.__type + " or " + self.__alt_type
         elif x > 1 and x < 4:
             self.__type = "Sedan"
             self.__alt_type = "4-Seat Coup"
-            return self.__type + " or " + self.__alt_type
+            return "Based on this we recommend you get a " + self.__type + " or " + self.__alt_type
         else:
             self.__type = "We couldn't find a car for you based on passengers"
             self.__alt_type = "we couldn't find an alternate car for you based on passengers"
@@ -60,22 +60,26 @@ class FinalCar(object):
 
     def car_from_mileage(self, mpg):
         m = mpg
-        if m > 10 and m < 20:
+        if m > 9 and m < 20:
             self.__type2 = "Muscle"
             self.__alt_type2 = "Sport"
-            return self.__type2 + " or " + self.__alt_type2 + " car"
-        elif m > 20 and m < 30:
+            return "Based on this we recommend you get a " + self.__type2 + " or " + self.__alt_type2 + " car"
+        elif m > 19 and m < 30:
             self.__type2 = "Van"
             self.__alt_type2 = "SUV"
-            return self.__type2 + " or " + self.__alt_type2
-        elif m > 30 and m < 50:
+            return "Based on this we recommend you get a " + self.__type2 + " or " + self.__alt_type2
+        elif m > 29 and m < 60:
             self.__type2 = "Sedan"
             self.__alt_type2 = "4-Seat Coup"
-            return self.__type2 + " or " + self.__alt_type2
+            return "Based on this we recommend you get a " + self.__type2 + " or " + self.__alt_type2
+        elif m > 59:
+            self.__type2 = "primary type"
+            self.__alt_type2 = "no secondary type"
+            return "We're sorry there was no " + self.__type2 + " or " + self.__alt_type2 + " that is that efficient"
         else:
-            self.__type = "We couldn't find a car for you based on mpg"
-            self.__alt_type = "We couldn't find an alternate car for you based on mpg"
-            print "There is no car that fits your needs based on passengers"
+            self.__type2 = "We couldn't find a car for you based on mpg"
+            self.__alt_type2 = "we couldn't find an alternate car for you based on mpg"
+            print "There is no car that fits your needs based on mileage"
             return self.__type2 + " and " + self.__alt_type2
 
 

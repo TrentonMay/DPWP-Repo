@@ -88,11 +88,11 @@ class Pages(object):
                 <h2>Your Recommended vehicle is</h2>
                 <div class= "info">
                     <h3>You gave us {people} passengers</h3>
-                    <p>Based on this we recommend you get a {cfp}</p>
+                    <p>{cfp}</p>
                 </div>
                 <div class= "info">
                     <h3>Your minimum mpg is {mpg}</h3>
-                    <p>Based on this we recommend you get a {cfm}</p>
+                    <p>{cfm}</p>
                 </div>
             </div>
         </div>
