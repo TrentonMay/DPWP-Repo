@@ -6,6 +6,7 @@ class Pages(object):
     <head>
         <title>YouCar!</title>
         <link href="css/main.css" rel="stylesheet">
+        <script src="js/main.js"></script>
     </head>
     <body>
         <header>
@@ -13,7 +14,7 @@ class Pages(object):
         </header>
 
         <div class="form">
-            <form method="GET" action="">
+            <form method="GET" action="" onsubmit="return check_input()">
                 <h2>Your Recommended Car Form</h2>
 
                 <label>Name: </label>
