@@ -26,7 +26,7 @@ class MainHandler(webapp2.RequestHandler):
             c.passenger = people
             mpg = m.mpg(miles, gal)
             cfm = f.car_from_mileage(mpg)
-            cfp = f.car_from_passengers(int(people))
+            cfp = f.car_from_passengers(people)
 
             print cfm
             print cfp

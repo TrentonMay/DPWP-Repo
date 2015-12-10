@@ -7,7 +7,7 @@ class CarData(object):
         return self.__passenger
     @passenger.setter
     def passenger(self, x):
-        if int(x) > 8:
+        if x > 8:
             print "There is no production vehicle that holds this many people"
         else:
             self.__passenger = x
@@ -40,7 +40,7 @@ class FinalCar(object):
 
     def car_from_passengers(self, people):
         x = people
-        if x == 1:
+        if x == 1 or x == 0:
             self.__type = "Muscle"
             self.__alt_type = "Sport"
             return self.__type + " or " + self.__alt_type + " car"
@@ -54,7 +54,7 @@ class FinalCar(object):
             return self.__type + " or " + self.__alt_type
         else:
             self.__type = "We couldn't find a car for you based on passengers"
-            self.__alt_type = "We couldn't find an alternate car for you based on passengers"
+            self.__alt_type = "we couldn't find an alternate car for you based on passengers"
             print "There is no car that fits your needs based on passengers"
             return self.__type + " and " + self.__alt_type
 
