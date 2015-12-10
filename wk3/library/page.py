@@ -18,13 +18,13 @@ class Pages(object):
                 <h2>Your Recommended Car Form</h2>
 
                 <label>Name: </label>
-                <input type="text" name="person">
+                <input type="text" name="person" id="user">
 
                 <label>Email: </label>
-                <input type="text" name="email">
+                <input type="text" name="email" id="email">
 
                 <label># Of Passengers: </label>
-                <input type="text" name="passenger">
+                <input type="text" name="passenger" id="psgr">
 
                 <h4>Do you want to subscribe to our newsletter?</h4>
 
