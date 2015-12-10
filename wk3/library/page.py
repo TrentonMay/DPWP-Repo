@@ -10,12 +10,12 @@ class Pages(object):
     </head>
     <body>
         <header>
-            <h1>YouCar!</h1>
+            <h1>Welcome To YouCar!</h1>
         </header>
 
         <div class="form">
             <form method="GET" action="" onsubmit="return check_input()">
-                <h2>Your Recommended Car Form</h2>
+                <h2>Let Us Help You Find A Car</h2>
 
                 <label>Name: </label>
                 <input type="text" name="person" id="user">

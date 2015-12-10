@@ -27,9 +27,6 @@ class MainHandler(webapp2.RequestHandler):
             mpg = m.mpg(miles, gal)
             cfm = f.car_from_mileage(mpg)
             cfp = f.car_from_passengers(int(people))
-
-            #print cfm
-            #print cfp
             self.response.write(p.print_final(person, email, news, people, cfm, cfp, mpg))
         else:
             self.response.write(p.content)

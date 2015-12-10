@@ -16,8 +16,6 @@ class CarData(object):
 
 class CalcMPG(object):
     def __init__(self):
-        self.__miles = ""
-        self.__gal = ""
         self.__final_mpg = 0
 
     def mpg(self, miles, gal):
@@ -44,7 +42,7 @@ class FinalCar(object):
             self.__type = "Muscle"
             self.__alt_type = "Sport"
             return "Based on this we recommend you get a " + self.__type + " or " + self.__alt_type + " car"
-        elif x < 8 and x > 4:
+        elif x < 8 and x > 3:
             self.__type = "Van"
             self.__alt_type = "SUV"
             return "Based on this we recommend you get a " + self.__type + " or " + self.__alt_type
@@ -60,7 +58,7 @@ class FinalCar(object):
 
     def car_from_mileage(self, mpg):
         m = mpg
-        if m > 9 and m < 20:
+        if m > 7 and m < 20:
             self.__type2 = "Muscle"
             self.__alt_type2 = "Sport"
             return "Based on this we recommend you get a " + self.__type2 + " or " + self.__alt_type2 + " car"
