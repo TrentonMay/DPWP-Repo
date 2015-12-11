@@ -1,5 +1,23 @@
+"""
+This is the pages class. This will be used to hold all of the html to be displayed later.
+There are two parts to this class
+self.content which holds the main page with the form that the user will use
+self.final_content which holds the results page that will show the users information
+"""
+
 class Pages(object):
     def __init__(self):
+
+        """
+        self.content
+
+        Below. This is the content that holds the form that the user will input information to
+        The user will be asked to input their name, email, number of passengers, desired miles to drive weekly,
+        desired gallons of gas that will be used weekly, and whether or not they want to subscribe
+        In the form there is a JavaScript function that is passed to it to validate the form.
+        See "main.js" for more details
+        """
+
         self.content = """
 <!DOCTYPE HTML>
 <html>
@@ -55,6 +73,16 @@ class Pages(object):
     </body>
 </html>
         """
+
+        """
+        self.final_content
+
+        Below. This will display the final results to the user through the html that is held here.
+        The user will have a list with their name, email, whether or not they subscribed
+        Additionally the user will see another list that contains choices of cars based on their preference of miles
+        per week and gallons per week.
+
+        """
         self.final_content = """
 <!DOCTYPE HTML>
 <html>
@@ -99,9 +127,10 @@ class Pages(object):
     </body>
 </html>
 """
+    # This function prints the final page.
     def print_final(self, person, email, news, people, cfm, cfp, mpg):
-        final_page = self.final_content
-        final_page = final_page.format(**locals())
+        final_page = self.final_content     # Simplifying the use of self.final_content
+        final_page = final_page.format(**locals())      # formatting the html from the final_page so that the data entered can be used
 
         # Below, I'm simply returning what was formatted for use in the MainHandler
         return final_page
