@@ -6,12 +6,15 @@ import Data
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Pages.Page()
-        d = Data.AnimeData()
+        d = Data.Anime()
 
-        if self.response.GET:
-            pass
+        if self.request.GET:
+            anime = self.request.GET["anime"]
+            print anime
+            print d.anime[1]
         else:
-            self.reponse.write(p.Print_out())
+
+            self.response.write(p.Print_out())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

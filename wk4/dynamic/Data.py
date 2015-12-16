@@ -1,5 +1,7 @@
 class AnimeData(object):
     def __init__(self):
+        self.title = ""
+        self.image = ""
         self.writer = ""
         self.publisher = ""
         self.director = ""
@@ -11,6 +13,8 @@ class Anime(AnimeData):
         super(AnimeData, self).__init__()
 
         sao = AnimeData()
+        sao.title = "Sword Art Online"
+        sao.image = "css/sao_d.jpg"
         sao.writer = "Reki Kawahara"
         sao.publisher = "ASCII Media Works"
         sao.director = "Tomohiko Ito"
@@ -26,6 +30,8 @@ class Anime(AnimeData):
                    "participants must survive the game as best they can."
 
         dbz = AnimeData()
+        dbz.title = "Dragon Ball Z"
+        dbz.title = "css/dbz_d.jpg"
         dbz.writer = "Takao Koyama"
         dbz.publisher = "Toei Animation"
         dbz.director = "Shigeyasu Yamauchi"
@@ -35,6 +41,8 @@ class Anime(AnimeData):
                    "realms in search of the magic powers of the seven Dragon Balls!"
 
         aot = AnimeData()
+        aot.title = "Attack On Titan"
+        aot.image = "css/aot_d.jpg"
         aot.writer = "Yasuko Kobayashi"
         aot.publisher = "Funimation"
         aot.director = "Tetsuro Araki"
@@ -48,6 +56,8 @@ class Anime(AnimeData):
                    "was reduced to one horrifying choice: kill - or be devoured!"
 
         rk = AnimeData()
+        rk.title = "Rurouni Kenshin"
+        rk.image = "css/rk_d.jpg"
         rk.writer = "Mari Okada"
         rk.publisher = "Aniplex"
         rk.director = "Kazuhiro Furuhashi"
@@ -60,6 +70,8 @@ class Anime(AnimeData):
                   'to the Kamiya Dojo where he discovers the chance to start life over'
 
         naruto = AnimeData()
+        naruto.title = "Naruto"
+        naruto.image = "css/naruto_d.jpg"
         naruto.writer = "Masashi Kishimoto"
         naruto.publisher = "TV TOKYO"
         naruto.director = "Hayato Date"
@@ -70,3 +82,4 @@ class Anime(AnimeData):
                       "the villagers hated him thinking that he himself was the demon fox. Naruto's dream is to become " \
                       "Hokage, and have the villagers acknowledge him"
         self.anime = [sao, dbz, aot, rk, naruto]
+

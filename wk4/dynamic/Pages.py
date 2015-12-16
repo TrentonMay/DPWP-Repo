@@ -40,4 +40,21 @@ class Page(object):
 class FinalPage(Page):
     def __init__(self):
         super(Page, self).__init__()
+        self.final = """
+    <div class="display" style="background-image: url('{}')">
+        <h1>{}</h1>
+        <div class="info">
+            <ul>
+                <li><p>Seasons:{}</p></li>
+                <li><p>Publisher:{}</p></li>
+                <li><p>Written By:{}</p></li>
+                <li><p>Director:{}</p></li>
+            </ul>
+        </div>
+        <div class="desc">
+            <h2>Description</h2>
+            <p>{}</p>
+        </div>
+    </div>
+        """
 
