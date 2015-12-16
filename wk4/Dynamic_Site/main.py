@@ -10,6 +10,8 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.response.GET:
             pass
+        else:
+            self.reponse.write(p.Print_out())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

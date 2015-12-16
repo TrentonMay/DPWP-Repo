@@ -34,6 +34,8 @@ class Page(object):
 </body>
 </html>
         """
+    def Print_out(self):
+        return self.nav + self.end
 
 class FinalPage(Page):
     def __init__(self):
