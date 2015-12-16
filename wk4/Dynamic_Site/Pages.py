@@ -1,3 +1,41 @@
 class Page(object):
     def __init__(self):
-        pass
+        self.nav = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href = "?anime=sao"><img src="css/sao_icon.png"></a>
+            </li>
+            <li>
+                <a href = "?anime=aot"><img src="css/aot_icon.png"></a>
+            </li>
+            <li>
+                <a href = "?anime=dbz"><img src="css/dbz_icon.png"></a>
+            </li>
+            <li>
+                <a href = "?anime=naruto"><img src="css/naruto_icon.png"></a>
+            </li>
+            <li>
+                <a href = "?anime=rk"><img src="css/rk_icon.png"></a>
+            </li>
+        </ul>
+    </nav>
+    """
+        self.end = """
+</body>
+</html>
+        """
+
+class FinalPage(Page):
+    def __init__(self):
+        super(Page, self).__init__()
+
