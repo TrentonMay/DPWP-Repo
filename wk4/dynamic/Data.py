@@ -31,7 +31,7 @@ class Anime(AnimeData):
 
         dbz = AnimeData()
         dbz.title = "Dragon Ball Z"
-        dbz.title = "css/dbz_d.jpg"
+        dbz.image = "css/dbz_d.jpg"
         dbz.writer = "Takao Koyama"
         dbz.publisher = "Toei Animation"
         dbz.director = "Shigeyasu Yamauchi"

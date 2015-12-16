@@ -10,10 +10,22 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET:
             anime = self.request.GET["anime"]
-            print anime
-            print d.anime[1]
+            if anime == "sao":
+                a = d.anime[0].title
+                print a
+            elif anime == "dbz":
+                a = d.anime[1].title
+                print a
+            elif anime == "aot":
+                a = d.anime[2].title
+                print a
+            elif anime == "rk":
+                a = d.anime[3].title
+                print a
+            elif anime == "naruto":
+                a = d.anime[4].title
+                print a
         else:
-
             self.response.write(p.Print_out())
 
 app = webapp2.WSGIApplication([
