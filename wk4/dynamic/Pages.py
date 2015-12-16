@@ -34,27 +34,31 @@ class Page(object):
 </body>
 </html>
         """
-    def Print_out(self):
+    def print_out(self, a):
         return self.nav + self.end
 
 class FinalPage(Page):
     def __init__(self):
         super(Page, self).__init__()
         self.final = """
-    <div class="display" style="background-image: url('{}')">
-        <h1>{}</h1>
+    <div class="display" style="background-image: url('{a.image}')">
+        <h1>{a.title}</h1>
         <div class="info">
             <ul>
-                <li><p>Seasons:{}</p></li>
-                <li><p>Publisher:{}</p></li>
-                <li><p>Written By:{}</p></li>
-                <li><p>Director:{}</p></li>
+                <li><p>Seasons:{a.episodes}</p></li>
+                <li><p>Publisher:{a.publisher}</p></li>
+                <li><p>Written By:{a.writer}</p></li>
+                <li><p>Director:{a.director}</p></li>
             </ul>
         </div>
         <div class="desc">
             <h2>Description</h2>
-            <p>{}</p>
+            <p>{a.desc}</p>
         </div>
     </div>
         """
+    def print_out(self, a):
+        final = self.final.format(**locals())
+        return self.nav + final + self.end
+        pass
 
