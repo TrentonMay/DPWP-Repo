@@ -1,6 +1,6 @@
 class Page(object):
     def __init__(self):
-        self.nav = """
+        self._nav = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,30 +33,35 @@ class Page(object):
         </ul>
     </nav>
     """
-        self.end = """
+        self._home = """
     <div id= "home-body" style="background-image: url('css/home.jpg')">
         <div id="h-desc">
             <h1>Welcome to Ani-World</h1>
             <p>Choose Any Anime To Find Out More Information</p>
         </div>
     </div>
+    """
+        self._end = """
 </body>
 </html>
         """
+    def home(self):
+
+        pass
     def print_out(self, a):
         print a
-        return self.nav + self.end
+        return self._nav + self._end
 
 class FinalPage(Page):
     def __init__(self):
         super(FinalPage, self).__init__()
 
-        self.final = """
+        self._final = """
     <div class="display" style="background-image: url('{a.image}')">
         <h1>{a.title}</h1>
         <div class="info">
             <ul>
-                <li><p>Seasons:{a.episodes}</p></li>
+                <li><p>Episodes:{a.episodes}</p></li>
                 <li><p>Publisher:{a.publisher}</p></li>
                 <li><p>Written By:{a.writer}</p></li>
                 <li><p>Director:{a.director}</p></li>
@@ -69,6 +74,6 @@ class FinalPage(Page):
     </div>
         """
     def print_out(self, a):
-        final = self.final.format(**locals())
-        return self.nav + final + self.end
+        final = self._final.format(**locals())
+        return self._nav + final + self._home + self._end
 
