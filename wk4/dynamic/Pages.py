@@ -38,7 +38,7 @@ class Page(object):
 </html>
         """
     def home_display(self, anime):
-        if anime == "home":
+        if anime == "home" or anime == "":
             home = """
     <div id= "home-body" style="background-image: url('css/home.jpg')">
         <div id="h-desc">
