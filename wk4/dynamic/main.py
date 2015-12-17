@@ -8,31 +8,31 @@ class MainHandler(webapp2.RequestHandler):
         p = Pages.Page()
         p2 = Pages.FinalPage()
         d = Data.Anime()
+        self.anime = ""
 
         if self.request.GET:
-            anime = self.request.GET["anime"]
-            if anime == "sao":
+            self.anime = self.request.GET["anime"]
+            if self.anime == "sao":
                 a = d.anime[0]
-                self.response.write(p2.print_out(a, anime))
-            elif anime == "dbz":
+                self.response.write(p2.print_out(a, self.anime))
+            elif self.anime == "dbz":
                 a = d.anime[1]
-                self.response.write(p2.print_out(a, anime))
-            elif anime == "aot":
+                self.response.write(p2.print_out(a, self.anime))
+            elif self.anime == "aot":
                 a = d.anime[2]
-                self.response.write(p2.print_out(a, anime))
-            elif anime == "rk":
+                self.response.write(p2.print_out(a, self.anime))
+            elif self.anime == "rk":
                 a = d.anime[3]
-                self.response.write(p2.print_out(a, anime))
-            elif anime == "naruto":
+                self.response.write(p2.print_out(a, self.anime))
+            elif self.anime == "naruto":
                 a = d.anime[4]
-                self.response.write(p2.print_out(a, anime))
+                self.response.write(p2.print_out(a, self.anime))
             else:
-                a = anime
-                self.response.write(p.print_out(a, anime))
+                a = d.anime
+                self.response.write(p.print_out(a, self.anime))
         else:
             a = d.anime
-            anime = self.request.GET["anime"]
-            self.response.write(p.print_out(a, anime))
+            self.response.write(p.print_out(a, self.anime))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

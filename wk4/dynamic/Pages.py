@@ -61,7 +61,7 @@ class FinalPage(Page):
         super(FinalPage, self).__init__()
     def home_display(self, anime):
         if anime == "home":
-            self._final = """
+            final = """
     <div id= "home-body" style="background-image: url('css/home.jpg')">
         <div id="h-desc">
             <h1>Welcome to Ani-World</h1>
@@ -69,9 +69,9 @@ class FinalPage(Page):
         </div>
     </div>
     """
-            return self._final
+            return final
         else:
-            self._final = """
+            final = """
     <div class="display" style="background-image: url('{a.image}')">
         <h1>{a.title}</h1>
         <div class="info">
@@ -88,7 +88,7 @@ class FinalPage(Page):
         </div>
     </div>
         """
-            return self._final
+            return final
 
     def print_out(self, a, anime):
         final = self.home_display(anime).format(**locals())
