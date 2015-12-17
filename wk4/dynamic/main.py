@@ -26,6 +26,9 @@ class MainHandler(webapp2.RequestHandler):
             elif anime == "naruto":
                 a = d.anime[4]
                 self.response.write(p2.print_out(a))
+            else:
+                a = d.anime
+                self.response.write(p.print_out(a))
         else:
             a = d.anime
             self.response.write(p.print_out(a))

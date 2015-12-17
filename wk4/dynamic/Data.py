@@ -15,9 +15,9 @@ class Anime(AnimeData):
         sao = AnimeData()
         sao.title = "Sword Art Online"
         sao.image = "css/sao_d.jpg"
-        sao.writer = "Reki Kawahara"
-        sao.publisher = "ASCII Media Works"
-        sao.director = "Tomohiko Ito"
+        sao.writer = " Reki Kawahara"
+        sao.publisher = " ASCII Media Works"
+        sao.director = " Tomohiko Ito"
         sao.episodes = 25
         sao.desc = "The year is 2022, and gamers have lined up on launch day for Sword Art Online, a " \
                    "hotly-anticipated MMORPG that lets players connect to an immersive virtual reality " \
@@ -32,9 +32,9 @@ class Anime(AnimeData):
         dbz = AnimeData()
         dbz.title = "Dragon Ball Z"
         dbz.image = "css/dbz_d.jpg"
-        dbz.writer = "Takao Koyama"
-        dbz.publisher = "Toei Animation"
-        dbz.director = "Shigeyasu Yamauchi"
+        dbz.writer = " Takao Koyama"
+        dbz.publisher = " Toei Animation"
+        dbz.director = " Shigeyasu Yamauchi"
         dbz.episodes = 291
         dbz.desc = "Goku - the strongest fighter on the planet - is all that stands between humanity and villains " \
                    "from the darkest corners of space. Joined in battle by the Z-Fighters, Goku travels to distant " \
@@ -43,9 +43,9 @@ class Anime(AnimeData):
         aot = AnimeData()
         aot.title = "Attack On Titan"
         aot.image = "css/aot_d.jpg"
-        aot.writer = "Yasuko Kobayashi"
-        aot.publisher = "Funimation"
-        aot.director = "Tetsuro Araki"
+        aot.writer = " Yasuko Kobayashi"
+        aot.publisher = " Funimation"
+        aot.director = " Tetsuro Araki"
         aot.episodes = 25
         aot.desc = "Known in Japan as Shingeki no Kyojin, many years ago, the last remnants of humanity " \
                    "were forced to retreat behind the towering walls of a fortified city to escape the " \
@@ -58,9 +58,9 @@ class Anime(AnimeData):
         rk = AnimeData()
         rk.title = "Rurouni Kenshin"
         rk.image = "css/rk_d.jpg"
-        rk.writer = "Mari Okada"
-        rk.publisher = "Aniplex"
-        rk.director = "Kazuhiro Furuhashi"
+        rk.writer = " Mari Okada"
+        rk.publisher = " Aniplex"
+        rk.director = " Kazuhiro Furuhashi"
         rk.episodes = 95
         rk.desc = 'Welcome to the Meiji Era. Japan is a land experiencing times of troubled peace and renewal ' \
                   'after a long and bloody civil war. Swords and killing are outlawed, but all is not as well as ' \
@@ -72,9 +72,9 @@ class Anime(AnimeData):
         naruto = AnimeData()
         naruto.title = "Naruto"
         naruto.image = "css/naruto_d.jpg"
-        naruto.writer = "Masashi Kishimoto"
-        naruto.publisher = "TV TOKYO"
-        naruto.director = "Hayato Date"
+        naruto.writer = " Masashi Kishimoto"
+        naruto.publisher = " TV TOKYO"
+        naruto.director = " Hayato Date"
         naruto.episodes = 661
         naruto.desc = "Many years ago, in the hidden village of Konoha, lived a great demon fox. When it swung " \
                       "one of it's nine tails, a tsunami occurred. The fourth hokage sealed this demon fox inside " \

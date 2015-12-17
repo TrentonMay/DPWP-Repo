@@ -35,11 +35,13 @@ class Page(object):
 </html>
         """
     def print_out(self, a):
+        print a
         return self.nav + self.end
 
 class FinalPage(Page):
     def __init__(self):
-        super(Page, self).__init__()
+        super(FinalPage, self).__init__()
+
         self.final = """
     <div class="display" style="background-image: url('{a.image}')">
         <h1>{a.title}</h1>
@@ -60,5 +62,4 @@ class FinalPage(Page):
     def print_out(self, a):
         final = self.final.format(**locals())
         return self.nav + final + self.end
-        pass
 
