@@ -31,7 +31,7 @@ class Page(object):
     </nav>
     """
         self.end = """
-    <div id= "home" style="background-image: url('css/home.jpg')">
+    <div id= "home-body" style="background-image: url('css/home.jpg')">
         <div id="h-desc">
             <h1>Welcome to A-World</h1>
             <p>Choose Any Anime To Find Out More Information</p>

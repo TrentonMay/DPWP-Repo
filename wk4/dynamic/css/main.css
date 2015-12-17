@@ -71,17 +71,21 @@ h2{
     font-family: "Poiret One", sans-serif;
 }
 /*-------------Home Style-----------------*/
-#home{
+#home-body{
     padding-top: 2%;
     height: 1080px;
-    background-image: url("css/home.jpg");
     background-attachment: fixed;
     background-size: cover;
     display: table;
     width: 100%;
 }
+#h-desc{
+    width: 30%;
+    margin: 0 auto;
+    background-color:rgba(255, 255, 255, 0.8);
+}
 #h-desc h1{
-    color: white;
+    color: #343434;
     font-size: 2em
     width: 100%;
     text-align: center;
@@ -91,7 +95,7 @@ h2{
     width: 100%;
     text-align: center;
     font-family: Roboto, sans-serif;
-    color: white;
+    color: #343434;
     font-size: 1.4em;
 }
 
@@ -108,7 +112,8 @@ h2{
     width: 100%;
 }
 .display h1 {
-    color: black;
+    background-color:rgba(255, 255, 255, 0.8);
+    color: #343434;
     width: 100%;
     text-align: center;
     font-family: Roboto, sans-serif;
