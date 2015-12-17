@@ -1,6 +1,6 @@
 
 import webapp2
-import Pages
+import Pages    # Importing everything from Pages.py
 import Data
 
 class MainHandler(webapp2.RequestHandler):
