@@ -37,7 +37,7 @@ class Page(object):
 </body>
 </html>
         """
-    def home(self, anime):
+    def home_display(self, anime):
         if anime == "home":
             home = """
     <div id= "home-body" style="background-image: url('css/home.jpg')">
@@ -54,13 +54,24 @@ class Page(object):
 
     def print_out(self, a, anime):
         print a
-        return self._nav + self.home(anime) + self._end
+        return self._nav + self.home_display(anime) + self._end
 
 class FinalPage(Page):
     def __init__(self):
         super(FinalPage, self).__init__()
-
-        self._final = """
+    def home_display(self, anime):
+        if anime == "home":
+            self._final = """
+    <div id= "home-body" style="background-image: url('css/home.jpg')">
+        <div id="h-desc">
+            <h1>Welcome to Ani-World</h1>
+            <p>Choose Any Anime To Find Out More Information</p>
+        </div>
+    </div>
+    """
+            return self._final
+        else:
+            self._final = """
     <div class="display" style="background-image: url('{a.image}')">
         <h1>{a.title}</h1>
         <div class="info">
@@ -77,14 +88,9 @@ class FinalPage(Page):
         </div>
     </div>
         """
-    def home(self, anime):
-        if anime == "home":
-            
-        else:
-            home = ""
-            return home
+            return self._final
 
     def print_out(self, a, anime):
-        final = self._final.format(**locals())
-        return self._nav + final + self.home(anime) + self._end
+        final = self.home_display(anime).format(**locals())
+        return self._nav + final + self._end
 
