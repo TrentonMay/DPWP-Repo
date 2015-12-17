@@ -5,13 +5,16 @@ class Page(object):
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Anime World</title>
     <link href="css/main.css" rel="stylesheet">
 
 </head>
 <body>
     <nav>
         <ul>
+            <li>
+                <a href = "?anime=home"><img src="css/home_icon.png"></a>
+            </li>
             <li>
                 <a href = "?anime=sao"><img src="css/sao_icon.png"></a>
             </li>
@@ -33,7 +36,7 @@ class Page(object):
         self.end = """
     <div id= "home-body" style="background-image: url('css/home.jpg')">
         <div id="h-desc">
-            <h1>Welcome to A-World</h1>
+            <h1>Welcome to Ani-World</h1>
             <p>Choose Any Anime To Find Out More Information</p>
         </div>
     </div>
